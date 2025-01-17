@@ -1,7 +1,7 @@
 import { StrictMode } from 'react'
 import { createRoot } from 'react-dom/client'
+import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import './index.css'
-import App from './App.jsx'
 
 // Bootstrap CSS
 import "bootstrap/dist/css/bootstrap.min.css";
@@ -9,8 +9,22 @@ import "bootstrap/dist/css/bootstrap.min.css";
 // Bootstrap Bundle JS
 import "bootstrap/dist/js/bootstrap.bundle.min";
 
-createRoot(document.getElementById('root')).render(
+// Components imports
+import CreateDrama from "./components/CreateDrama";
+import ShowDramaList from "./components/ShowDramaList.js";
+import ShowDramaDetails from "./components/ShowDramaDetails.js";
+import UpdateDramaInfo from "./components/UpdateDramaInfo.js";
+
+// Routes
+const router = createBrowserRouter([
+  { path: "/", element: <ShowDramaList /> },
+  { path: "/create-drama", element: <CreateDrama /> },
+  { path: "/show-drama/:id", element: <ShowDramaDetails /> },
+  { path: "/edit-drama/:id", element: <UpdateDramaInfo /> },
+]);
+
+createRoot(document.getElementById("root")).render(
   <StrictMode>
-    <App />
-  </StrictMode>,
-)
+    <RouterProvider router={router} />
+  </StrictMode>
+);
