@@ -10,7 +10,7 @@ const connectDB = () => {
  .then((client) => {
    db = client;
  })
- console.log("database connected.");
+ console.log("MongoDB database connected.");
 }
 
 
