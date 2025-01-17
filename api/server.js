@@ -6,8 +6,8 @@ const cors =require("cors")
 const app=Express();
 const bodyParser = require("body-parser");
 const routes = require("./routes/dramas");
-
-
+const port = process.env.PORT || 8082;
+require('dotenv').config();
 
 // use the cors middleware with the origin and credentials options
 app.use(cors({ origin: true, credentials: true }));
@@ -25,7 +25,7 @@ connectDB.connectDB();
 
 // app.get('/', (req, res) => res.send('Hello world!'));
 
-const port = process.env.PORT || 8082;
+
 
 app.listen(port, () => console.log(`Server running on port ${port}`));
 

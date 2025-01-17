@@ -1,6 +1,8 @@
 const MongoClient = require('mongodb').MongoClient;
-const URI =
-  "mongodb+srv://dbUser:j8ZPYPpDOeVMiu92@cluster0.enornqg.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0";
+// const URI =
+//   "mongodb+srv://dbUser:j8ZPYPpDOeVMiu92@cluster0.enornqg.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0";
+require('dotenv').config();
+const URI = process.env.URI;
 
 const DATABASENAME="watchlist";
 let db;
