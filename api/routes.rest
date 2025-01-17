@@ -1,3 +1,40 @@
 GET http://localhost:8082/
 ###
 GET http://localhost:8082/6783a30a1a694833ac67dba6
+
+### CREATE DRAMA
+POST http://localhost:8082/
+content-type: application/json
+
+{
+    "title": "Mr. Plankton",
+    "year": "Last Name",
+    "type": "Series",
+    "season": "1",
+    "episodes": "10",
+    "description": "test dec",
+    "imageUrl": "https://static1.srcdn.com/wordpress/wp-content/uploads/2024/10/mr-plankton-poster.jpg?q=50&fit=crop&w=162&h=240&dpr=1.5",
+    "rating": "5",
+    "genre": "Romantic Comedy"
+
+}
+
+### UPDATE DRAMA
+PUT http://localhost:8082/678a6f2af71cc1bc81739b66
+content-type: application/json
+
+{
+    "title": "Mr. Plankton",
+    "year": "2024-01-01T00:00:00.000+00:00",
+    "type": "Series",
+    "season": "1",
+    "episodes": "10",
+    "description": "test dec",
+    "imageUrl": "https://static1.srcdn.com/wordpress/wp-content/uploads/2024/10/mr-plankton-poster.jpg?q=50&fit=crop&w=162&h=240&dpr=1.5",
+    "rating": "5",
+    "genre": "Romantic Comedy"
+
+}
+
+### DELETE DRAMA
+DELETE http://localhost:8082/678a6f2af71cc1bc81739b66 HTTP/1.1

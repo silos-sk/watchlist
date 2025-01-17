@@ -28,6 +28,9 @@ const DramaSchema = new mongoose.Schema({
   },
   rating: {
     type: String
+  },
+  genre: {
+    type: String
   }
 
 });
