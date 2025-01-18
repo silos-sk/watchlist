@@ -17,9 +17,8 @@ const DramaCard = ({drama}) => {
         </h2>
         <p>{drama.year} | {drama.type} | Genre: {drama.genre}</p>
         <p>Season: {drama.season} | Episodes {drama.episodes}</p>
-        <p>{drama.description}</p>
-        <p>{drama.rating}</p>
-      
+        <p>Rating: {drama.rating}</p>
+
       </div>
     </div>
   );

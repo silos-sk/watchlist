@@ -5,12 +5,15 @@ import '../App.css';
 
 function UpdateDramaInfo() {
   const [drama, setDrama] = useState({
-    title: '',
-    isbn: '',
-    author: '',
-    description: '',
-    published_date: '',
-    publisher: '',
+    title : '',
+    year : '',
+    type : '',
+    season: '',
+    episodes : '',
+    description : '',
+    imageUrl: '',
+    rating: '',
+    genre: ''
   });
 
   const { id } = useParams();
@@ -21,15 +24,15 @@ function UpdateDramaInfo() {
       .get(`http://localhost:8082/${id}`)
       .then((res) => {
         setDrama({
-          title : res.body.title,
-          year : res.body.year,
-          type : res.body.type,
-          season: res.body.season,
-          episodes : res.body.episodes,
-          description : res.body.description,
-          imageUrl: res.body.imageUrl,
-          rating: res.body.rating,
-          genre: res.body.genre
+          title : res.data.title,
+          year : res.data.year,
+          type : res.data.type,
+          season: res.data.season,
+          episodes : res.data.episodes,
+          description : res.data.description,
+          imageUrl: res.data.imageUrl,
+          rating: res.data.rating,
+          genre: res.data.genre
         });
       })
       .catch((err) => {
@@ -47,7 +50,8 @@ function UpdateDramaInfo() {
 
     const data = {
       title : drama.title,
-      year : drama.type,
+      year : drama.year,
+      type : drama.type,
       season: drama.season,
       episodes : drama.episodes,
       description : drama.description,
@@ -64,7 +68,7 @@ function UpdateDramaInfo() {
       })
       .catch((err) => {
         console.log(err.response.data)
-        console.log('Error in UpdateBookInfo!');
+        console.log('Error in UpdateDramaInfo!');
       });
   };
 
@@ -111,16 +115,22 @@ function UpdateDramaInfo() {
               />
             </div>
             <br />
-            <div className='form-group'>
-              <label htmlFor='type'>Type</label>
-              <input
+            <div>
+            <label htmlFor='type'>Type </label>
+                <select name="type" value={drama.type} onChange={onChange}>
+                <option value="Series">Series</option>
+                <option value="Movie">Movie</option>
+            </select>
+
+              
+              {/* <input
                 type='text'
                 placeholder='Type'
                 name='type'
                 className='form-control'
                 value={drama.type}
-                onChange={onChange}
-              />
+               
+              /> */}
             </div>
             <br />
             <div className='form-group'>
@@ -139,7 +149,7 @@ function UpdateDramaInfo() {
               <label htmlFor='episodes'>Episodes</label>
               <input
                 type='text'
-                placeholder='Season'
+                placeholder='Episodes'
                 name='episodes'
                 className='form-control'
                 value={drama.episodes}

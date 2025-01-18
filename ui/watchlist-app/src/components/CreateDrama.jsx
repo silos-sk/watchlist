@@ -74,7 +74,7 @@ const CreateDrama = () => {
               <br />
               <div className="form-group">
                 <input
-                  type="date"
+                  type="text"
                   placeholder="year"
                   name="year"
                   className="form-control"
@@ -84,14 +84,11 @@ const CreateDrama = () => {
               </div>
               <br />
               <div className="form-group">
-                <input
-                  type="text"
-                  placeholder="type"
-                  name="type"
-                  className="form-control"
-                  value={drama.type}
-                  onChange={onChange}
-                />
+              <label htmlFor='type'>Type </label>
+                <select name="type" value={drama.type} onChange={onChange}>
+                <option value="Series">Series</option>
+                <option value="Movie">Movie</option>
+            </select>
               </div>
               <br />
               <div className="form-group">
@@ -131,9 +128,9 @@ const CreateDrama = () => {
                 <input
                   type="text"
                   placeholder="image URL"
-                  name="imageURL"
+                  name="imageUrl"
                   className="form-control"
-                  value={drama.imageURL}
+                  value={drama.imageUrl}
                   onChange={onChange}
                 />
               </div>

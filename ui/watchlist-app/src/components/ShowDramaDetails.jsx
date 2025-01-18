@@ -36,45 +36,14 @@ function ShowDramaDetails() {
 
   const DramaItem = (
     <div>
-      <table className='table table-hover table-dark'>
-        <tbody>
-          <tr>
-            <th scope='row'>1</th>
-            <td>Title</td>
-            <td>{drama.title}</td>
-          </tr>
-          <tr>
-            <th scope='row'>2</th>
-            <td>Year</td>
-            <td>{drama.year}</td>
-          </tr>
-          <tr>
-            <th scope='row'>3</th>
-            <td>Genre</td>
-            <td>{drama.genre}</td>
-          </tr>
-          <tr>
-            <th scope='row'>4</th>
-            <td>Season</td>
-            <td>{drama.season}</td>
-          </tr>
-          <tr>
-            <th scope='row'>5</th>
-            <td>Episodes</td>
-            <td>{drama.episodes}</td>
-          </tr>
-          <tr>
-            <th scope='row'>6</th>
-            <td>Description</td>
-            <td>{drama.description}</td>
-          </tr>
-          <tr>
-            <th scope='row'>7</th>
-            <td>Rating</td>
-            <td>{drama.rating}</td>
-          </tr>
-        </tbody>
-      </table>
+        <section>
+        <h1>{drama.title}</h1>
+        <p>{drama.year} | Genre: {drama.genre}</p>
+        <p>{drama.type} | Season: {drama.season} | Episodes: {drama.episodes}</p>
+        <p>{drama.description}</p>
+        <p>Rating: {drama.rating}</p>
+        </section>
+     
     </div>
   );
 
@@ -85,7 +54,7 @@ function ShowDramaDetails() {
           <div className='col-md-10 m-auto'>
             <br /> <br />
             <Link to='/' className='btn btn-outline-warning float-left'>
-              Show Book List
+              Show Drama List
             </Link>
           </div>
           <br />
