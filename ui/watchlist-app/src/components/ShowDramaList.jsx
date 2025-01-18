@@ -30,7 +30,7 @@ function ShowDramaList() {
         <div className="row">
           <div className="col-md-12">
             <br />
-            <h2 className="display-4 text-center">Dramas List</h2>
+            <h2 className="display-5 text-center mb-4">My Dramas Collection</h2>
           </div>
 
           <div className="col-md-11">

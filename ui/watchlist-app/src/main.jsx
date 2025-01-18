@@ -23,12 +23,6 @@ const router = createBrowserRouter([
   { path: "/edit-drama/:id", element: <UpdateDramaInfo /> },
 ]);
 
-// createRoot(document.getElementById("root")).render(
-//   <StrictMode>
-//     <RouterProvider router={router} />
-//   </StrictMode>
-// );
-
 createRoot(document.getElementById("root")).render(
   <React.StrictMode>
     <RouterProvider router={router} />

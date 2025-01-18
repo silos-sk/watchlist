@@ -35,14 +35,16 @@ function ShowDramaDetails() {
   };
 
   const DramaItem = (
-    <div>
+    <div className="DramaItem">
         <section>
         <h1>{drama.title}</h1>
-        <p>{drama.year} | Genre: {drama.genre}</p>
+        <p className="sub">{drama.year} | Genre: {drama.genre}</p>
         <p>{drama.type} | Season: {drama.season} | Episodes: {drama.episodes}</p>
         <p>{drama.description}</p>
         <p>Rating: {drama.rating}</p>
         </section>
+
+        <section><img src={drama.imageUrl} height={380} /></section>
      
     </div>
   );
@@ -58,13 +60,21 @@ function ShowDramaDetails() {
             </Link>
           </div>
           <br />
-          <div className='col-md-8 m-auto'>
-            <h1 className='display-4 text-center'>Drama&apos;s Record</h1>
-            <p className='lead text-center'>View Drama&apos;s Info</p>
-            <hr /> <br />
+         {/* Drama Info */}
+          <div className='col-md-10 mx-auto mt-4 mb-4 px-6'>{DramaItem}</div>
+
+           {/* Edit Drama */}
+          <div className='col-md-4 mx-auto'>
+            <Link
+              to={`/edit-drama/${drama._id}`}
+              className='btn btn-secondary btn-lg btn-block'
+            >
+              Edit Drama Info
+            </Link>
           </div>
-          <div className='col-md-10 m-auto'>{DramaItem}</div>
-          <div className='col-md-6 m-auto'>
+        
+        {/* Delete Drama */}
+          <div className='col-md-3 m-auto'>
             <button
               type='button'
               className='btn btn-outline-danger btn-lg btn-block'
@@ -74,14 +84,6 @@ function ShowDramaDetails() {
             >
               Delete Drama
             </button>
-          </div>
-          <div className='col-md-6 m-auto'>
-            <Link
-              to={`/edit-drama/${drama._id}`}
-              className='btn btn-outline-info btn-lg btn-block'
-            >
-              Edit Drama
-            </Link>
           </div>
         </div>
       </div>

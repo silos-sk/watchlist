@@ -57,7 +57,7 @@ const CreateDrama = () => {
               Show Drama List
             </Link>
           </div>
-          <div className="col-md-10 m-auto">
+          <div className="col-md-6 m-auto">
             <h1 className="display-4 text-center">Add Drama</h1>
             <p className="lead text-center">Create new drama</p>
             <form noValidate onSubmit={onSubmit}>
@@ -75,7 +75,7 @@ const CreateDrama = () => {
               <div className="form-group">
                 <input
                   type="text"
-                  placeholder="year"
+                  placeholder="Year"
                   name="year"
                   className="form-control"
                   value={drama.year}
@@ -84,7 +84,7 @@ const CreateDrama = () => {
               </div>
               <br />
               <div className="form-group">
-              <label htmlFor='type'>Type </label>
+              <label htmlFor='type'>Type: </label>
                 <select name="type" value={drama.type} onChange={onChange}>
                 <option value="Series">Series</option>
                 <option value="Movie">Movie</option>
@@ -94,7 +94,7 @@ const CreateDrama = () => {
               <div className="form-group">
                 <input
                   type="text"
-                  placeholder="season"
+                  placeholder="Season"
                   name="season"
                   className="form-control"
                   value={drama.season}
@@ -105,8 +105,8 @@ const CreateDrama = () => {
               <div className="form-group">
                 <input
                   type="text"
-                  placeholder="episodes"
-                  name="episodes"
+                  placeholder="Episodes"
+                  name="Episodes"
                   className="form-control"
                   value={drama.episodes}
                   onChange={onChange}
@@ -138,7 +138,7 @@ const CreateDrama = () => {
               <div className="form-group">
                 <input
                   type="text"
-                  placeholder="Rating of this Drama"
+                  placeholder="Drama Rating"
                   name="rating"
                   className="form-control"
                   value={drama.rating}
@@ -148,7 +148,7 @@ const CreateDrama = () => {
               <div className="form-group">
                 <input
                   type="text"
-                  placeholder="Genre of this Drama"
+                  placeholder="Drama Genre"
                   name="genre"
                   className="form-control"
                   value={drama.genre}

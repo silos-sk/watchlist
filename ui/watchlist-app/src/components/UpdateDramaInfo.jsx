@@ -83,7 +83,7 @@ function UpdateDramaInfo() {
             </Link>
           </div>
           <div className='col-md-8 m-auto'>
-            <h1 className='display-4 text-center'>Edit Drama</h1>
+            <h1 className='display-5 text-center mt-3'>Edit Drama</h1>
             <p className='lead text-center'>Update Drama&apos;s Info</p>
           </div>
         </div>
@@ -102,7 +102,18 @@ function UpdateDramaInfo() {
               />
             </div>
             <br />
-
+            <div className='form-group'>
+              <label htmlFor='imageUrl'>ImageUrl</label>
+              <input
+                type='text'
+                placeholder='Image Url'
+                name='imageUrl'
+                className='form-control'
+                value={drama.imageUrl}
+                onChange={onChange}
+              />
+            </div>
+            <br />
             <div className='form-group'>
               <label htmlFor='year'>Year</label>
               <input
@@ -115,14 +126,15 @@ function UpdateDramaInfo() {
               />
             </div>
             <br />
-            <div>
-            <label htmlFor="type">Type </label>
+
+            <div className="form-group">
+              <label htmlFor='type'>Type: </label>
                 <select name="type" value={drama.type} onChange={onChange}>
-                    <option value="Series">Series</option>
-                    <option value="Movie">Movie</option>
-                </select>
-            </div>
-            <br />
+                <option value="Series">Series</option>
+                <option value="Movie">Movie</option>
+            </select>
+              </div>
+
             <div className='form-group'>
               <label htmlFor='season'>Season</label>
               <input
@@ -189,7 +201,7 @@ function UpdateDramaInfo() {
 
             <button
               type='submit'
-              className='btn btn-outline-info btn-lg btn-block'
+              className='btn btn-warning btn-lg btn-block'
             >
               Update Drama
             </button>
