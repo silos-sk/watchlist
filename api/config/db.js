@@ -1,6 +1,4 @@
 const MongoClient = require('mongodb').MongoClient;
-// const URI =
-//   "mongodb+srv://dbUser:j8ZPYPpDOeVMiu92@cluster0.enornqg.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0";
 require('dotenv').config();
 const URI = process.env.URI;
 
@@ -14,20 +12,6 @@ const connectDB = () => {
  })
  console.log("MongoDB database connected.");
 }
-
-
-// const connectDB = async () => {
-//   try {
-//     Mongoclient.connect(URI,(error,client)=>{
-//       database=client.db("watchlist");
-//       console.log("MongoDB Connection Successful")
-//   })
-//   } catch (err) {
-//     console.error(err.message);
-//     process.exit(1);
-//   }
-  
-// };
 
 const getDatabase = () =>{
   return db;

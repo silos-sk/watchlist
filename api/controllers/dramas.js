@@ -1,4 +1,4 @@
-// Controller for the artists collection
+// Controller for the Drama collection
 const mongodb = require('../config/db');
 const ObjId = require('mongodb').ObjectId;
 
@@ -50,7 +50,7 @@ const userId = new ObjId(req.params.id);
 }
 };
 
-// create new Drama
+// Create new Drama
 const createDrama = async (req, res) => {
   try {
       const newDrama = {

@@ -1,4 +1,4 @@
-// Validation helper code
+// Validation helper code - for future use
 const Validator = require('validatorjs');
 const validator = (body, rules, customMessages, callback) => {
   const validation = new Validator(body, rules, customMessages);

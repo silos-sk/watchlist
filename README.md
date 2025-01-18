@@ -50,7 +50,6 @@ For the backend, I used NodeJS, Express, and MongoDB, along with libraries such 
 
 # Useful Websites
 
-{Make a list of websites that you found helpful in this project}
 * [React Tutorial App](https://react.dev/)
 * [React Tutorial App](https://react-tutorial.app/)
 * [Freecodecamp - Learn React](https://www.freecodecamp.org/news/how-to-learn-react-step-by-step/)
@@ -59,7 +58,6 @@ For the backend, I used NodeJS, Express, and MongoDB, along with libraries such 
 
 # Future Work
 
-{Make a list of things that you need to fix, improve, and add in the future.}
 * Use React Form library to improve forms to include validation and update form field data types
 * Include a Star Rating system
 * Include 'Adding to favorites' feature

@@ -1,5 +1,6 @@
 const mongoose = require('mongoose');
 
+// Drama Database Model
 const DramaSchema = new mongoose.Schema({
   title: {
     type: String,
