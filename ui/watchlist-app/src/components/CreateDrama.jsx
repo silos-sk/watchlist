@@ -58,11 +58,12 @@ const CreateDrama = () => {
             </Link>
           </div>
           <div className="col-md-6 m-auto">
-            <h1 className="display-4 text-center">Add Drama</h1>
-            <p className="lead text-center">Create new drama</p>
+            <h1 className="display-5 text-center mt-4">Add Drama</h1>
+            <p className="lead text-center">Create a new drama record</p>
+            
             <form noValidate onSubmit={onSubmit}>
               <div className="form-group">
-                <input
+                <input 
                   type="text"
                   placeholder="Drama Title"
                   name="title"
@@ -73,7 +74,7 @@ const CreateDrama = () => {
               </div>
               <br />
               <div className="form-group">
-                <input
+                <input 
                   type="text"
                   placeholder="Year"
                   name="year"
@@ -103,7 +104,7 @@ const CreateDrama = () => {
               </div>
               <br />
               <div className="form-group">
-                <input
+                <input 
                   type="text"
                   placeholder="Episodes"
                   name="Episodes"
@@ -114,7 +115,7 @@ const CreateDrama = () => {
               </div>
               <br />
               <div className="form-group">
-                <input
+                <input 
                   type="text"
                   placeholder="Describe this drama"
                   name="description"
@@ -136,7 +137,7 @@ const CreateDrama = () => {
               </div>
               <br />
               <div className="form-group">
-                <input
+                <input 
                   type="text"
                   placeholder="Drama Rating"
                   name="rating"

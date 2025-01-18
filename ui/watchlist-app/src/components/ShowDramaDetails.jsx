@@ -64,10 +64,10 @@ function ShowDramaDetails() {
           <div className='col-md-10 mx-auto mt-4 mb-4 px-6'>{DramaItem}</div>
 
            {/* Edit Drama */}
-          <div className='col-md-4 mx-auto'>
+          <div className='col-md-5 mx-auto'>
             <Link
               to={`/edit-drama/${drama._id}`}
-              className='btn btn-secondary btn-lg btn-block'
+              className='btn btn-secondary btn-lg btn-block mt-1'
             >
               Edit Drama Info
             </Link>
@@ -77,7 +77,7 @@ function ShowDramaDetails() {
           <div className='col-md-3 m-auto'>
             <button
               type='button'
-              className='btn btn-outline-danger btn-lg btn-block'
+              className='btn btn-outline-danger btn-lg btn-block mt-1'
               onClick={() => {
                 onDeleteClick(drama._id);
               }}
