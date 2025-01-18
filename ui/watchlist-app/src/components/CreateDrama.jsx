@@ -116,7 +116,7 @@ const CreateDrama = () => {
               </div>
               <br />
 
-            {/* Drama Episodes Field */}
+            {/* Drama Number of Episodes Field */}
             <div className='form-group'>
               <label htmlFor='episodes'>Episodes</label>
               <input

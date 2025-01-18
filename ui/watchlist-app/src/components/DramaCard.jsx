@@ -2,15 +2,20 @@
 import { Link } from 'react-router-dom';
 import '../App.css';
 
+// Indvidual Drama Card to display in Home Page collection
 const DramaCard = ({drama}) => {
   
   return (
     <div className='card-container'>
+
+    {/* Drama Image */}
       <img
         src={drama.imageUrl}
         alt='Dramas'
         height={380}
       />
+
+      {/* Drama Details */}
       <div className='desc'>
         <h2>
           <Link to={`/show-drama/${drama._id}`}>{drama.title}</Link>

@@ -4,9 +4,11 @@ import axios from 'axios';
 import { Link } from 'react-router-dom';
 import DramaCard from './DramaCard';
 
+// Show Drama Collection in Home Page
 function ShowDramaList() {
   const [dramas, setDramas] = useState([]);
 
+  // Pull Drama list collection from the backend and display
   useEffect(() => {
     axios
       .get('http://localhost:8082')
@@ -19,6 +21,7 @@ function ShowDramaList() {
       });
   }, []);
 
+  // Generate card layout for each Drama pulled from the backend
   const dramaList =
     dramas.length === 0
       ? 'there is no drama record!'
@@ -33,6 +36,7 @@ function ShowDramaList() {
             <h2 className="display-5 text-center mb-4">My Dramas Collection</h2>
           </div>
 
+          {/* Button to Add a Drama */}
           <div className="col-md-11">
             <Link
               to="/create-drama"
@@ -46,6 +50,7 @@ function ShowDramaList() {
           </div>
         </div>
 
+        {/* Drama Collection List */}
         <div className="list_container">
           <div className="list">{dramaList}</div>
           </div>

@@ -9,6 +9,7 @@ function ShowDramaDetails() {
   const { id } = useParams();
   const navigate = useNavigate();
 
+  // Display drama information pulled from the database
   useEffect(() => {
     axios
       .get(`http://localhost:8082/${id}`)
@@ -21,6 +22,7 @@ function ShowDramaDetails() {
       });
   }, [id]);
 
+  // Capture Drama ID to be deleted, send to backend to delete, then route page back to home page
   const onDeleteClick = (id) => {
     axios
       .delete(`http://localhost:8082/${id}`)
@@ -34,6 +36,7 @@ function ShowDramaDetails() {
       });
   };
 
+  // Drama Details
   const DramaItem = (
     <div className="DramaItem">
         <section>
@@ -55,11 +58,14 @@ function ShowDramaDetails() {
         <div className='row'>
           <div className='col-md-10 m-auto'>
             <br /> <br />
+
+            {/* Button to Show All Dramas */}
             <Link to='/' className='btn btn-outline-warning float-left'>
               Show Drama List
             </Link>
           </div>
           <br />
+          
          {/* Drama Info */}
           <div className='col-md-10 mx-auto mt-4 mb-4 px-6'>{DramaItem}</div>
 
