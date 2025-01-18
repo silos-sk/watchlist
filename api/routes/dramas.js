@@ -10,20 +10,17 @@ const Drama = require('../models/Drama');
 router.get('/', dramas.getData);
 
 // CREATE NEW DRAMA
-router.post('/', [validate.saveDrama], dramas.createDrama);
-// router.post('/', [requiresAuth(), validate.saveArtist], artists.createArtist);
+router.post('/', dramas.createDrama);
+// router.post('/', [validate.saveDrama], dramas.createDrama);
+// router.post('/', [requiresAuth(), validate.saveDrama], drdamas.createDrama);
 
 // GET, PUT, DELETE BY ID ROUTES
 router.route('/:id')
 .get(dramas.getDramaById)
-.put([validate.saveDrama],dramas.updateDrama)
+.put(dramas.updateDrama)
 .delete(dramas.removeDrama)
 
-// GET, PUT, DELETE BY ID ROUTES
-// router.route('/:id')
-// .get(artists.getArtistById)
-// .put([requiresAuth(), validate.saveArtist], artists.updateArtist)
-// .delete(requiresAuth(), artists.removeArtist)
-
+// .put([validate.saveDrama],dramas.updateDrama)
+// .put([requiresAuth(), validate.saveDrama], dramas.updateDrama)
 
 module.exports = router;

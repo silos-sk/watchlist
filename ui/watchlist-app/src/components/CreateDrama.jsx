@@ -103,17 +103,20 @@ const CreateDrama = () => {
                 />
               </div>
               <br />
-              <div className="form-group">
-                <input 
-                  type="text"
-                  placeholder="Episodes"
-                  name="Episodes"
-                  className="form-control"
-                  value={drama.episodes}
-                  onChange={onChange}
-                />
-              </div>
-              <br />
+
+            <div className='form-group'>
+              <label htmlFor='episodes'>Episodes</label>
+              <input
+                type='text'
+                placeholder='Episodes'
+                name='episodes'
+                className='form-control'
+                value={drama.episodes}
+                onChange={onChange}
+              />
+            </div>
+            <br />
+
               <div className="form-group">
                 <input 
                   type="text"
