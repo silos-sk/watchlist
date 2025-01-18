@@ -6,6 +6,7 @@ import { useNavigate } from "react-router-dom";
 const CreateDrama = () => {
   const navigate = useNavigate();
 
+  // Set initial state to empty
   const [drama, setDrama] = useState({
     title: "",
     year: "",
@@ -18,10 +19,12 @@ const CreateDrama = () => {
     genre: "",
   });
 
+  // On form field once filled, add to new set of array to capture user input to add to database
   const onChange = (e) => {
     setDrama({ ...drama, [e.target.name]: e.target.value });
   };
 
+  // On form submit, add drama to database
   const onSubmit = (e) => {
     e.preventDefault();
     axios
@@ -61,7 +64,10 @@ const CreateDrama = () => {
             <h1 className="display-5 text-center mt-4">Add Drama</h1>
             <p className="lead text-center">Create a new drama record</p>
             
+            {/* Add Drama Form */}
             <form noValidate onSubmit={onSubmit}>
+
+                {/* Drama Title Field */}
               <div className="form-group">
                 <input 
                   type="text"
@@ -73,6 +79,8 @@ const CreateDrama = () => {
                 />
               </div>
               <br />
+
+              {/* Drama Year Field */}
               <div className="form-group">
                 <input 
                   type="text"
@@ -84,6 +92,8 @@ const CreateDrama = () => {
                 />
               </div>
               <br />
+
+              {/* Drama Type Field */}
               <div className="form-group">
               <label htmlFor='type'>Type: </label>
                 <select name="type" value={drama.type} onChange={onChange}>
@@ -92,6 +102,8 @@ const CreateDrama = () => {
             </select>
               </div>
               <br />
+
+              {/* Drama Season Field */}
               <div className="form-group">
                 <input
                   type="text"
@@ -104,6 +116,7 @@ const CreateDrama = () => {
               </div>
               <br />
 
+            {/* Drama Episodes Field */}
             <div className='form-group'>
               <label htmlFor='episodes'>Episodes</label>
               <input
@@ -117,6 +130,7 @@ const CreateDrama = () => {
             </div>
             <br />
 
+              {/* Drama Description Field */}
               <div className="form-group">
                 <input 
                   type="text"
@@ -139,6 +153,8 @@ const CreateDrama = () => {
                 />
               </div>
               <br />
+
+              {/* Drama Rating Field */}
               <div className="form-group">
                 <input 
                   type="text"
@@ -149,6 +165,9 @@ const CreateDrama = () => {
                   onChange={onChange}
                 />
               </div>
+              <br/>
+              
+              {/* Drama Genre Field */}
               <div className="form-group">
                 <input
                   type="text"
