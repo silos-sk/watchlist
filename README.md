@@ -60,7 +60,7 @@ For the backend, I used NodeJS, Express, and MongoDB, along with libraries such 
 # Future Work
 
 {Make a list of things that you need to fix, improve, and add in the future.}
-* Use React Form library to improve forms
+* Use React Form library to improve forms to include validation and update form field data types
 * Include a Star Rating system
 * Include 'Adding to favorites' feature
 * Include Reviews feature 
