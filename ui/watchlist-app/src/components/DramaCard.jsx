@@ -9,7 +9,7 @@ const DramaCard = ({drama}) => {
       <img
         src={drama.imageUrl}
         alt='Dramas'
-        height={200}
+        height={380}
       />
       <div className='desc'>
         <h2>

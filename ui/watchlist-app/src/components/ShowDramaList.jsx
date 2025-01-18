@@ -46,7 +46,9 @@ function ShowDramaList() {
           </div>
         </div>
 
-        <div className="list">{dramaList}</div>
+        <div className="list_container">
+          <div className="list">{dramaList}</div>
+          </div>
       </div>
     </div>
   );

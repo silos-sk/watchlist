@@ -116,21 +116,11 @@ function UpdateDramaInfo() {
             </div>
             <br />
             <div>
-            <label htmlFor='type'>Type </label>
+            <label htmlFor="type">Type </label>
                 <select name="type" value={drama.type} onChange={onChange}>
-                <option value="Series">Series</option>
-                <option value="Movie">Movie</option>
-            </select>
-
-              
-              {/* <input
-                type='text'
-                placeholder='Type'
-                name='type'
-                className='form-control'
-                value={drama.type}
-               
-              /> */}
+                    <option value="Series">Series</option>
+                    <option value="Movie">Movie</option>
+                </select>
             </div>
             <br />
             <div className='form-group'>
