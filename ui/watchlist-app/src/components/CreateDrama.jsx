@@ -171,7 +171,7 @@ const CreateDrama = () => {
               <div className="form-group">
                 <input
                   type="text"
-                  placeholder="Drama Genre"
+                  placeholder="Genre"
                   name="genre"
                   className="form-control"
                   value={drama.genre}
