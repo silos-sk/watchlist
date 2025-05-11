@@ -26,7 +26,7 @@ Success message should read:  <br />
 To see the working app, use the browser to open http://localhost:5173/ <br />
 
 ## Demo Video
-Video walkthrough inluded in Canvas submission
+https://youtu.be/4VmeDqlnavA?si=qEpi06NV0IOElyEE
 
 ## Web Pages
 ### Home - Dramas Collection
